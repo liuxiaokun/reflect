@@ -7,6 +7,7 @@ import java.io.Serializable;
  * @version 1.7
  * @since 2016/12/16
  */
+@Deprecated
 public class User implements Serializable, Cloneable {
 
     private String name;
