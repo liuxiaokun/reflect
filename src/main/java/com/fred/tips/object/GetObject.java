@@ -15,6 +15,7 @@ public class GetObject {
 
         User user = (User) clazz.newInstance();
 
+        //invoke non-argument constructor method.
         System.out.println(user);
         //User{name='null', age=0}
 
