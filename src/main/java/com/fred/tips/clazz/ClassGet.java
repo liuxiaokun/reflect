@@ -3,6 +3,7 @@ package com.fred.tips.clazz;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.Arrays;
 
@@ -46,6 +47,14 @@ public class ClassGet {
 
         int modifiers = clazz.getModifiers();
         System.out.println(Modifier.toString(modifiers));//public
+
+        Class[] interfaces = clazz.getInterfaces();
+        System.out.println(Arrays.toString(interfaces));
+        //[interface java.io.Serializable, interface java.lang.Cloneable]
+
+        Method[] declaredMethods = clazz.getDeclaredMethods();
+        System.out.println(Arrays.toString(declaredMethods));
+        //[public java.lang.String com.fred.tips.clazz.User.toString(), public java.lang.String com.fred.tips.clazz.User.getName(), public void com.fred.tips.clazz.User.setName(java.lang.String), public void com.fred.tips.clazz.User.setAge(int), public int com.fred.tips.clazz.User.getAge()]
 
 
     }
